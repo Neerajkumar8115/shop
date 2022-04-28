@@ -1,16 +1,14 @@
-import 'package:codepur/homepage.dart';
 import 'package:codepur/utils/routes.dart';
 import 'package:flutter/material.dart';
 
-class loginpage extends StatefulWidget {
-  const loginpage({Key? key}) : super(key: key);
+class Loginpage extends StatefulWidget {
+  const Loginpage({Key? key}) : super(key: key);
 
   @override
-  _loginpageState createState() => _loginpageState();
+  _LoginpageState createState() => _LoginpageState();
 }
 
-class _loginpageState extends State<loginpage> {
-  String name = "";
+class _LoginpageState extends State<Loginpage> {
   bool changeButton = false;
   final _formkey = GlobalKey<FormState>();
 
@@ -30,6 +28,7 @@ class _loginpageState extends State<loginpage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text("Login Page"),
@@ -41,11 +40,11 @@ class _loginpageState extends State<loginpage> {
             child: Column(
               children: [
                 Image.asset(
-                  "assets/images/Heyyy.jpg",
-                  fit: BoxFit.fitWidth,
+                  "assets/images/login.png",
+                  fit: BoxFit.fill,
                 ),
                 SizedBox(height: 20),
-                Text("Welcome $name",
+                Text("Welcome",
                     style:
                         TextStyle(fontSize: 25, fontStyle: FontStyle.italic)),
                 SizedBox(height: 20),
@@ -65,9 +64,7 @@ class _loginpageState extends State<loginpage> {
                     }
                   },
                   onChanged: (value) {
-                    setState(() {
-                      name = value;
-                    });
+                    setState(() {});
                   },
                 ),
                 SizedBox(
@@ -95,49 +92,26 @@ class _loginpageState extends State<loginpage> {
                   height: 20,
                 ),
                 InkWell(
-                  onTap: () => moveToHome(context),
-                  child: AnimatedContainer(
-                    duration: Duration(seconds: 3),
-                    height: 50,
-                    width: changeButton ? 70 : 150,
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Login",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25,
-                      ),
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.deepOrange,
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(22),
-                        topRight: Radius.circular(22),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 25,
-                ),
-                // ElevatedButton(
-                //   style: ElevatedButton.styleFrom(
-                //     padding: EdgeInsets.only(right: 20, left: 20),
-                //   ),
-                //   onPressed: () => {
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //         builder: (context) => homepage(),
-                //       ),
-                //     ),
-                //   },
-                //   child: Text("Login",
-                //       style: TextStyle(
-                //         fontStyle: FontStyle.italic,
-                //       )),
-                // ),
+                    onTap: () => moveToHome(context),
+                    child: AnimatedContainer(
+                        duration: Duration(seconds: 3),
+                        height: 50,
+                        width: changeButton ? 70 : 150,
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Login",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                            color: Colors.deepOrange,
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(22),
+                              topRight: Radius.circular(22),
+                            )))),
               ],
             ),
           ),

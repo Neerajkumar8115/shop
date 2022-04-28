@@ -9,16 +9,22 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+          appBarTheme: AppBarTheme(
+        color: Colors.white,
+        elevation: 0.0,
+        iconTheme: IconThemeData(color: Colors.black),
+        textTheme: Theme.of(context).textTheme,
+      )),
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeRoute,
       routes: {
-        "/": (context) => loginpage(),
-        MyRoutes.homeRoute: (context) => homepage(),
-        MyRoutes.loginRoute: (context) => loginpage(),
+        // "/": (context) => Loginpage(),
+        MyRoutes.homeRoute: (context) => Homepage(),
+        MyRoutes.loginRoute: (context) => Loginpage(),
       },
     );
   }

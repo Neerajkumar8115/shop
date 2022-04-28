@@ -1,34 +1,31 @@
 import 'package:codepur/drawer.dart';
+import 'package:codepur/item_widget.dart';
 import 'package:flutter/material.dart';
+import 'models/catalogModel.dart';
 
-class homepage extends StatefulWidget {
-  const homepage({Key? key}) : super(key: key);
-
+class Homepage extends StatefulWidget {
+  const Homepage({Key? key}) : super(key: key);
   @override
-  _homepageState createState() => _homepageState();
+  _HomepageState createState() => _HomepageState();
 }
 
-class _homepageState extends State<homepage> {
-  final int day = 30;
-  final String name = "Codepur";
-
+class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Catalog App'),
-      ),
-      drawer: DrawerHeader(
-        child: UserAccountsDrawerHeader(
-          accountName: Text("Neeraj kumar"),
-          accountEmail: Text("nk04740@gmail.com"),
+      appBar: AppBar(title: Text('Catalog App')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView.builder(
+          itemCount: CatalogModel.items.length,
+          itemBuilder: (context, index) {
+            return ItemWidget(
+              item: CatalogModel.items[index],
+            );
+          },
         ),
       ),
-      body: Center(
-        child: Container(
-          child: Text("welcom to $day  days of flutter by $name"),
-        ),
-      ),
+      drawer: MyDrawer(),
     );
   }
 }
