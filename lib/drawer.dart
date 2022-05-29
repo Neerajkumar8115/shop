@@ -44,6 +44,13 @@ class MyDrawer extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.black,
                   ))),
+          //     ListTile(
+          // leading: Icon(CupertinoIcons.ha),
+          // title: Text("About",
+          //     textScaleFactor: 1.2,
+          //     style: TextStyle(
+          //       color: Colors.black,
+          //     ))),
         ],
       ),
     );

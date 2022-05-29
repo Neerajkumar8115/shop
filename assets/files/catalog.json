@@ -1,0 +1,59 @@
+
+// {
+//   "product":[
+//    {
+//       "id": 1,
+//       "name": "iphone 12pro",
+//       "decs": "Bahut mahanga hain",
+//       "price": 999,
+//       "color": "#335050",
+//       "image":
+//           "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone11-green-select-2019_GEO_EMEA?wid=940&hei=1112&fmt=png-alpha&.v=1567021766404",
+//     },
+//     {
+//       "id": 2,
+//       "name": "iphone 12pro",
+//       "decs": "Bahut mahanga hain",
+//       "price": 999,
+//       "color": "#335050",
+//       "image":
+//           "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone11-green-select-2019_GEO_EMEA?wid=940&hei=1112&fmt=png-alpha&.v=1567021766404",
+//     },
+// {
+//       "id": 3,
+//       "name": "iphone 12pro",
+//       "decs": "Bahut mahanga hain",
+//       "price": 999,
+//       "color": "#335050",
+//       "image":
+//           "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone11-green-select-2019_GEO_EMEA?wid=940&hei=1112&fmt=png-alpha&.v=1567021766404",
+//     },
+// {
+//       "id": 4,
+//       "name": "iphone 12pro",
+//       "decs": "Bahut mahanga hain",
+//       "price": 999,
+//       "color": "#335050",
+//       "image":
+//           "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone11-green-select-2019_GEO_EMEA?wid=940&hei=1112&fmt=png-alpha&.v=1567021766404",
+//     },
+// {           
+//       "id": 4,
+//       "name": "iphone 12pro",
+//       "decs": "Bahut mahanga hain",
+//       "price": 999,
+//       "color": "#335050",
+//       "image":
+//           "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone11-green-select-2019_GEO_EMEA?wid=940&hei=1112&fmt=png-alpha&.v=1567021766404",
+//     },
+// {
+//       "id": 5,
+//       "name": "iphone 12pro",
+//       "decs": "Bahut mahanga hain",
+//       "price": 999,
+//       "color": "#335050",
+//       "image":
+//           "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone11-green-select-2019_GEO_EMEA?wid=940&hei=1112&fmt=png-alpha&.v=1567021766404",
+//         },
+//       ]
+//    }

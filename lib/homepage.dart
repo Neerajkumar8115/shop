@@ -13,7 +13,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Catalog App')),
+      appBar: AppBar(centerTitle: true, title: Text('Catalog App')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView.builder(
