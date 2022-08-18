@@ -12,6 +12,7 @@ class ItemWidget extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.symmetric(vertical: 8),
         child: Card(
+          
           shadowColor: Colors.black,
           elevation: 3,
           child: Padding(
@@ -20,6 +21,7 @@ class ItemWidget extends StatelessWidget {
               leading: Image.network(item.image),
               title: Text(item.name),
               subtitle: Text(item.decs),
+             
               trailing: Text(
                 "\u{20B9}${item.price}",
                 style: TextStyle(
@@ -34,6 +36,7 @@ class ItemWidget extends StatelessWidget {
                     builder: (context) => Preview(
                       catalog: item,
                     ),
+                    
                   ),
                 );
               },
