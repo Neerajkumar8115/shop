@@ -7,6 +7,7 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     final imageUrl =
         // Image.asset('assets/images/01.jpg');
+        // "https://avatars.githubusercontent.com/u/89794239?s=400&u=0fd5967885d471949aa31618194ca05b712eb45d&v=4";
         "https://static.vecteezy.com/packs/media/components/global/search-explore-nav/img/vectors/term-bg-1-666de2d941529c25aa511dc18d727160.jpg";
     return Drawer(
       child: ListView(
@@ -44,13 +45,13 @@ class MyDrawer extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.black,
                   ))),
-          //     ListTile(
-          // leading: Icon(CupertinoIcons.ha),
-          // title: Text("About",
-          //     textScaleFactor: 1.2,
-          //     style: TextStyle(
-          //       color: Colors.black,
-          //     ))),
+          ListTile(
+              leading: Icon(CupertinoIcons.doc_text_search),
+              title: Text("About",
+                  textScaleFactor: 1.2,
+                  style: TextStyle(
+                    color: Colors.black,
+                  ))),
         ],
       ),
     );

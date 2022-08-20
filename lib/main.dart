@@ -3,6 +3,7 @@ import 'package:codepur/homepage.dart';
 import 'package:codepur/loginpage.dart';
 import 'package:codepur/utils/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,12 +15,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+          fontFamily: GoogleFonts.lato().fontFamily,
+          primarySwatch: Colors.blue,
+          primaryColor: Colors.black,
+          primaryIconTheme: const IconThemeData(color: Colors.black),
+          primaryTextTheme: GoogleFonts.latoTextTheme(
+            Theme.of(context).textTheme,
+          ),
           appBarTheme: AppBarTheme(
-        color: Colors.white,
-        elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.black),
-        textTheme: Theme.of(context).textTheme,
-      )),
+            color: Colors.white,
+            elevation: 0.0,
+            iconTheme: IconThemeData(color: Colors.black),
+            textTheme: Theme.of(context).textTheme,
+          )),
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeRoute,
       routes: {
