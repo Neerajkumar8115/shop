@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           fontFamily: GoogleFonts.lato().fontFamily,
           primarySwatch: Colors.blue,
-          primaryColor: Colors.black,
           primaryIconTheme: const IconThemeData(color: Colors.black),
           primaryTextTheme: GoogleFonts.latoTextTheme(
             Theme.of(context).textTheme,
