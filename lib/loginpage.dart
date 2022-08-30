@@ -32,6 +32,7 @@ class _LoginpageState extends State<Loginpage> {
       home: Scaffold(
         appBar: AppBar(
           title: Text("Login Page"),
+          centerTitle: true,
         ),
         body: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: 20),
@@ -40,7 +41,7 @@ class _LoginpageState extends State<Loginpage> {
             child: Column(
               children: [
                 Image.asset(
-                  "assets/images/login.png",
+                  "assets/images/login.jpg",
                   fit: BoxFit.fill,
                 ),
                 SizedBox(height: 20),

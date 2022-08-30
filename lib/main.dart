@@ -15,16 +15,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          fontFamily: GoogleFonts.lato().fontFamily,
-          primarySwatch: Colors.blue,
-          primaryIconTheme: const IconThemeData(color: Colors.black),
-          primaryTextTheme: GoogleFonts.latoTextTheme(
+          fontFamily: GoogleFonts.poppins(color: Colors.cyan).fontFamily,
+          primarySwatch: Colors.orange,
+          primaryIconTheme: const IconThemeData(color: Colors.orange),
+          primaryTextTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme,
           ),
           appBarTheme: AppBarTheme(
             color: Colors.white,
             elevation: 0.0,
-            iconTheme: IconThemeData(color: Colors.black),
+            iconTheme: IconThemeData(),
             textTheme: Theme.of(context).textTheme,
           )),
       debugShowCheckedModeBanner: false,

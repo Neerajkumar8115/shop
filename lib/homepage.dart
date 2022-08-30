@@ -15,9 +15,9 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(220, 248, 228, 228),
       floatingActionButton: FloatingActionButton(
         tooltip: 'Add To Cart',
-        hoverColor: Colors.blue[400],
         onPressed: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => CartPage()));

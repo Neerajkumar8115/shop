@@ -13,79 +13,84 @@ class Preview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        title: Text(
-          'Selected item',
-          style: TextStyle(
-            color: Colors.blueGrey[200],
+        bottomNavigationBar: ElevatedButton(
+          onPressed: () {},
+          child: Padding(
+            padding: EdgeInsets.only(top: 10, bottom: 10),
+            child: Text(
+              " Buy \u{20B9}${catalog.price}",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 25,
+                fontWeight: FontWeight.w200,
+              ),
+              textScaleFactor: 1.1,
+            ),
           ),
         ),
-      ),
-      body:
-          // Hero(
-          //   tag: Key(catalog.id.toString()),
-          Column(
-        children: [
-          Center(
-            child: Image.network(
-              catalog.image,
-              height: 240,
-            ),
-          ),
-          // Expanded(
-          //   child: Container(
-          //     width: 400,
-          //     color: Colors.white,
-          //     child: Column(
-          //       children: [
-          //         Text(
-          //           catalog.name,
-          //           style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-          //         ),
-          Text(
-            catalog.decs,
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
+          title: Text(
+            'Selected item',
             style: TextStyle(
-              fontSize: 17,
-              color: Color.fromARGB(255, 126, 102, 94),
+              color: Colors.blueGrey[200],
             ),
           ),
-          SizedBox(height: 20),
-          Center(
-            child: Container(
-              child: Text(
-                this.text,
-                textAlign: TextAlign.start,
-                style: TextStyle(
-                  color: Colors.blueGrey[300],
-                  fontStyle: FontStyle.italic,
+        ),
+        body: Hero(
+          tag: Key(catalog.id.toString()),
+          child: Column(
+            children: [
+              Center(
+                child: Image.network(
+                  catalog.image,
+                  height: 240,
                 ),
               ),
-            ),
+              Expanded(
+                child: Container(
+                  width: 400,
+                  color: Colors.white,
+                  child: Column(
+                    children: [
+                      Text(
+                        catalog.name,
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        catalog.decs,
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Color.fromARGB(255, 128, 108, 101),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 170,
+                        height: 20,
+                        child: Divider(color: Colors.blueGrey[500]),
+                      ),
+                      Center(
+                        child: Container(
+                          child: Text(
+                            this.text,
+                            textAlign: TextAlign.center,
+                            // textDirection: TextDirection.ltr,
+                            style: TextStyle(
+                              color: Colors.blueGrey[300],
+                              fontStyle: FontStyle.italic,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
-      //   ),
-      // ),
-      // ],
-      // ),
-      bottomNavigationBar: ElevatedButton(
-        onPressed: () {},
-        child: Padding(
-          padding: EdgeInsets.only(top: 10, bottom: 10),
-          child: Text(
-            "\u{20B9}${catalog.price}",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontWeight: FontWeight.w200,
-            ),
-            textScaleFactor: 1.1,
-          ),
-        ),
-      ),
-    );
+        ));
   }
 }
