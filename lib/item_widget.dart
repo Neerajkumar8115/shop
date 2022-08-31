@@ -1,3 +1,4 @@
+import 'package:codepur/Cart_page.dart';
 import 'package:codepur/Preview.dart';
 import 'package:codepur/models/catalogModel.dart';
 import 'package:flutter/material.dart';
@@ -16,44 +17,42 @@ class ItemWidget extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           child: ListTile(
             leading: Image.network(item.image),
-            title: Text(item.name),
-            subtitle: Text(item.decs),
+            title: Column(children: [Text(item.name)]),
+            subtitle: Column(children: [Text(item.decs)]),
             trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-              // TextButton(
-              //   onpressed(){},
-              //   Text("\u{20B9}${item.price}"),
-              //   style: TextStyle(
-              //     color: Colors.black,
-              //     fontWeight: FontWeight.w300,
-              // ),
-              ElevatedButton(
+              ButtonBar(alignment: MainAxisAlignment.spaceBetween, children: [
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Preview(
+                                    catalog: item,
+                                  )));
+                    },
+                    child: Text("Buy")),
+                SizedBox(
+                  width: 10,
+                ),
+                ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Preview(
-                                  catalog: item,
-                                )));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => CartPage()));
                   },
-                  child: Text("Buy")),
-              SizedBox(
-                width: 10,
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text('Add to Cart'),
-              ),
+                  child: Text('Add to Cart'),
+                ),
+              ]),
             ]),
-            // onTap: () {
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //     builder: (context) => Preview(
-            //       catalog: item,
-            //     ),
-            //     ),
-            //   );
-            // },
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Preview(
+                    catalog: item,
+                  ),
+                ),
+              );
+            },
           ),
         ),
       ),

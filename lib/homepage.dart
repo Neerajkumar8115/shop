@@ -22,7 +22,7 @@ class _HomepageState extends State<Homepage> {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => CartPage()));
         },
-        backgroundColor: Colors.blue[900],
+        // backgroundColor: Colors.blue[900],
         child: Icon(CupertinoIcons.cart),
       ),
       appBar: AppBar(
