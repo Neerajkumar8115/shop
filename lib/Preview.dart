@@ -10,11 +10,15 @@ class Preview extends StatelessWidget {
                          see you confront stack of technical jargon
                           ET offers a quick guide some associated terms 
                           and some of the more important consideration """;
+
+  final snackBar = SnackBar(content: Text('Buying not support yet'));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+          },
           child: Padding(
             padding: EdgeInsets.only(top: 10, bottom: 10),
             child: Text(

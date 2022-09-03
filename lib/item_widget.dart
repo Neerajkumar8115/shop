@@ -9,7 +9,7 @@ class ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
+      padding: EdgeInsets.symmetric(vertical: 10),
       child: Card(
         shadowColor: Colors.black,
         elevation: 4,
@@ -17,38 +17,39 @@ class ItemWidget extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           child: ListTile(
             leading: Image.network(item.image),
-            title: Column(children: [Text(item.name)]),
-            subtitle: Column(children: [Text(item.decs)]),
-            trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-              ButtonBar(alignment: MainAxisAlignment.spaceBetween, children: [
-                ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Preview(
-                                    catalog: item,
-                                  )));
-                    },
-                    child: Text(
-                      "Buy",
-                      style: TextStyle(color: Colors.white),
-                    )),
-                SizedBox(
-                  width: 10,
-                ),
-                ElevatedButton(
+            title: Text(item.name),
+            subtitle: Text(item.decs),
+            trailing: Column(
+              children: [
+                Expanded(
+                    child: ElevatedButton(
+                  child: Text("Buy", style: TextStyle(color: Colors.white)),
                   onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => CartPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Preview(
+                                  catalog: item,
+                                )));
                   },
-                  child: Text(
-                    'Add to Cart',
-                    style: TextStyle(color: Colors.white),
-                  ),
+                )),
+                SizedBox(
+                  height: 6,
                 ),
-              ]),
-            ]),
+                Expanded(
+                    child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CartPage()));
+                        },
+                        child: Text(
+                          'Add to Cart',
+                          style: TextStyle(color: Colors.white),
+                        ))),
+              ],
+            ),
             onTap: () {
               Navigator.push(
                 context,
