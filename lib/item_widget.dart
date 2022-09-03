@@ -30,16 +30,22 @@ class ItemWidget extends StatelessWidget {
                                     catalog: item,
                                   )));
                     },
-                    child: Text("Buy")),
+                    child: Text(
+                      "Buy",
+                      style: TextStyle(color: Colors.white),
+                    )),
                 SizedBox(
                   width: 10,
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => CartPage()));
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) => CartPage()));
                   },
-                  child: Text('Add to Cart'),
+                  child: Text(
+                    'Add to Cart',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ]),
             ]),

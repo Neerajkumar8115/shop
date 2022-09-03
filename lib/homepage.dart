@@ -17,13 +17,16 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       backgroundColor: Color.fromARGB(220, 248, 228, 228),
       floatingActionButton: FloatingActionButton(
+        child: Icon(
+          CupertinoIcons.cart,
+          color: Colors.white,
+        ),
         tooltip: 'Add To Cart',
         onPressed: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => CartPage()));
         },
         // backgroundColor: Colors.blue[900],
-        child: Icon(CupertinoIcons.cart),
       ),
       appBar: AppBar(
         title: Text(

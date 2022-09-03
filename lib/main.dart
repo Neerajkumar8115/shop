@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          fontFamily: GoogleFonts.poppins(color: Colors.cyan).fontFamily,
+          fontFamily: GoogleFonts.poppins().fontFamily,
           primarySwatch: Colors.orange,
           primaryIconTheme: const IconThemeData(color: Colors.orange),
           primaryTextTheme: GoogleFonts.poppinsTextTheme(
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
             textTheme: Theme.of(context).textTheme,
           )),
       debugShowCheckedModeBanner: false,
-       initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         // "/": (context) => Loginpage(),
         MyRoutes.homeRoute: (context) => Homepage(),
