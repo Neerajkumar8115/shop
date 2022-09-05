@@ -17,7 +17,7 @@ class ItemWidget extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           child: ListTile(
             leading: Image.network(item.image),
-            title: Text(item.name),
+            title: Row(children: [Text(item.name)]),
             subtitle: Text(item.decs),
             trailing: Column(
               children: [
