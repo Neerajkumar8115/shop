@@ -1,6 +1,7 @@
 import 'package:codepur/Cart_page.dart';
 import 'package:codepur/homepage.dart';
 import 'package:codepur/loginpage.dart';
+import 'package:codepur/splash_Screen.dart';
 import 'package:codepur/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -29,9 +30,9 @@ class MyApp extends StatelessWidget {
             titleTextStyle: Theme.of(context).textTheme.headline6,
           )),
       debugShowCheckedModeBanner: false,
-      // initialRoute: MyRoutes.loginRoute,
+      // initialRoute: MyRoutes.homeRoute,
       routes: {
-        "/": (context) => Loginpage(),
+        "/": (context) => Splash(),
         MyRoutes.homeRoute: (context) => Homepage(),
         MyRoutes.loginRoute: (context) => Loginpage(),
         MyRoutes.cartRoute: (context) => CartPage(),

@@ -17,39 +17,45 @@ class ItemWidget extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           child: ListTile(
             leading: Image.network(item.image),
-            title: Row(children: [Text(item.name)]),
-            subtitle: Text(item.decs),
-            trailing: Column(
-              children: [
-                Expanded(
-                    child: ElevatedButton(
-                  child: Text("Buy", style: TextStyle(color: Colors.white)),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Preview(
-                                  catalog: item,
-                                )));
-                  },
-                )),
-                SizedBox(
-                  height: 6,
+            title: Text(item.name),
+            subtitle: Row(children: [
+              Expanded(
+                child: Column(
+                  children: [
+                    Text(item.decs),
+                  ],
                 ),
-                Expanded(
-                    child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => CartPage()));
-                        },
-                        child: Text(
-                          'Add to Cart',
-                          style: TextStyle(color: Colors.white),
-                        ))),
-              ],
-            ),
+              ),
+              Expanded(
+                child: Column(children: [
+                  ElevatedButton(
+                    child: Text("Buy", style: TextStyle(color: Colors.white)),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Preview(
+                                    catalog: item,
+                                  )));
+                    },
+                  ),
+                  SizedBox(
+                    height: 6,
+                  ),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CartPage()));
+                      },
+                      child: Text(
+                        'Add to Cart',
+                        style: TextStyle(color: Colors.white),
+                      )),
+                ]),
+              ),
+            ]),
             onTap: () {
               Navigator.push(
                 context,
